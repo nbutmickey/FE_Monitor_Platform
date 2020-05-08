@@ -17,9 +17,9 @@ exports.getStandardTime=function(divider) {
 function getNormalTime(divider){
     const date = new Date(Date.now());
     if (divider) {
-        date.setMinutes(date.getMinutes() - date.getTimezoneOffset() - divider);
+        date.setMinutes(date.getMinutes() - divider);
     } else {
-        date.setMinutes(date.getMinutes() - date.getTimezoneOffset());
+        date.setMinutes(date.getMinutes());
     }
     return date;
 }
