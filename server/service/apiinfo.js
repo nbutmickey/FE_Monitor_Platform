@@ -104,6 +104,7 @@ const getSuccessAPIRateByTimeDivider = async function (appID, sTime, eTime, divi
     }
 }
 const getAPISuccessDurationByTimeDivider = async function (appID, sTime, eTime, divider) {
+	console.log("API成功",sTime,eTime)
     try {
         return await APIDao.getSuccessAPIDurationDividerByTime(appID, sTime, eTime, divider);
     } catch (error) {
@@ -111,6 +112,7 @@ const getAPISuccessDurationByTimeDivider = async function (appID, sTime, eTime, 
     }
 }
 const getAPIFailedDurationByTimeDivider = async function (appID, sTime, eTime, divider) {
+	console.log("API失败",sTime,eTime)
     try {
         return await APIDao.getFailedAPIDurationDividerByTime(appID, sTime, eTime, divider);
     } catch (error) {
